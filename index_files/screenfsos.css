@@ -32,10 +32,10 @@
 				/* large, at least when using Verdana     */
 
 body {
-   font-family:     Palatino, Verdana, sans-serif;             /* , Verdana, "Bitstream Vera Sans", Helvetica, "Lucida Sans", Arial, sans-serif; */
+   font-family:     Verdana, "Bitstream Vera Sans", "Lucida Sans", Arial, Helvetica, sans-serif;
    font-size:       90%;	/* Allow IE/Win to resize the document */
    color:           black;
-   background:      #ffffff;                             /* Here the color of the VISIBLE BOTTOM BACKGROUND */
+   background:      #444444;                             /* Here the color of the VISIBLE BOTTOM BACKGROUND */
    margin:          0;
    padding:         0;
    border:          none;
@@ -396,7 +396,7 @@ table.simple th.right {
    background:      white;
    margin:          0 0 0 1.2em;
    padding:         0.25em 1.5em 0.5em 1em;
-   /* border-left:     1px solid #999999; */
+   border-left:     1px solid #999999;
 }
 
 #main h1 {			/* Should be used once, following navhead */
@@ -489,7 +489,7 @@ table.simple th.right {
    line-height:     1.25;
    margin:          0 0 0.75em 1.5em;
    padding:         0.5em 1em;
-   border:          0px solid #999999;
+   border:          1px solid #999999;
    float:           right;
    clear:           right;
 }
@@ -589,7 +589,7 @@ table.simple th.right {
 
 #header {			/* Warning: not printed out on paper */
    color:           #4d5c45;
-   background:      #ffffff    /* #6688bb;   */                               /* Here the color of a VISIBLE BACKGROUND */
+   background:      #bbbbaa    /* #6688bb;   */                               /* Here the color of a VISIBLE BACKGROUND */
 }
 
 #header a:link,
@@ -668,9 +668,8 @@ table.simple th.right {
 /* Subheader for global links */
 
 #header div.subheader {
-   text-align:      justify;
-   color:           black;
-   background:      lightblue;                                           /* Here the color of a VISIBLE BAR */
+   color:           white;
+   background:      #444444;                                           /* Here the color of a VISIBLE BAR */
    margin:          0;
    padding:         0.25em 1.5em 0.5em 0.5em; /* For IE/Win */
    clear:           both;
@@ -683,8 +682,8 @@ table.simple th.right {
 #header div.subheader a:link,
 #header div.subheader a:visited {
    font-weight:     bolder;
-   color:           #b20000;
-   background:      yellow;
+   color:           white;
+   background:      transparent;
    margin:          0;
    padding:         0 0.5em;
 }
@@ -692,7 +691,7 @@ table.simple th.right {
 #header div.subheader .highlight,
 #header div.subheader a.highlight:link,
 #header div.subheader a.highlight:visited {
-   color:           #0f0f0f;                                          /* Here the color of the VISIBLE text in the bar */
+   color:           #a26345;
    background:      transparent;
 }
 
@@ -701,7 +700,7 @@ table.simple th.right {
    margin-left: 20px;
    width: 45%;
    height: 200px;
-   background: #ffffff;                /* Here the color of a VISIBLE BOX in the header */   
+   background: #F0F0F0;
    float: left;
 }
 
@@ -780,7 +779,7 @@ table.simple th.right {
    font-size:       90%;
    text-align:      left;
    color:           white;
-   background:      #ffffff;                                        /* Here the color of the VISIBLE FOOTER BAR */
+   background:      #000000;                                        /* Here the color of the VISIBLE FOOTER BAR */
    margin:          0;
    padding:         0.5em 1.67em 0.5em 15.25em;
    clear:           both;
