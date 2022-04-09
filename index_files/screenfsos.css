@@ -7,19 +7,15 @@
 
 /* Author:  John Zaitseff <J.Zaitseff@zap.org.au>
    Version: 1.2
-
    $Id: sinorcaish-screen.css 164 2006-01-10 04:01:17Z john $
-
    This file provides the Sinorcaish style sheet for screen-based user
    agents (ie, for ordinary Web browsers).  This file conforms to the
    Cascading Style Sheets 2.1 specification.
-
    The design of Sinorcaish is influenced by Sinorca (available from the
    Open Source Web Design site, http://www.oswd.org/), which in turn was
    based on the Acronis company web site (http://www.acronis.com/).  You
    can find more information about this design from its home page on the
    ZAP Group web site, http://www.zap.org.au/documents/styles/sinorcaish/.
-
    This file may be redistributed and/or modified on the condition that
    the original copyright notice is retained.
 */
@@ -32,10 +28,10 @@
 				/* large, at least when using Verdana     */
 
 body {
-   font-family:     Verdana, "Bitstream Vera Sans", "Lucida Sans", Arial, Helvetica, sans-serif;
+   font-family:     Verdana, "Bitstream Vera Sans", Helvetica, "Lucida Sans", Arial, sans-serif;
    font-size:       90%;	/* Allow IE/Win to resize the document */
    color:           black;
-   background:      #444444;                             /* Here the color of the VISIBLE BOTTOM BACKGROUND */
+   background:      #ffffff;                             /* Here the color of the VISIBLE BOTTOM BACKGROUND */
    margin:          0;
    padding:         0;
    border:          none;
@@ -381,7 +377,6 @@ table.simple th.right {
 
 /* The following HTML elements should NOT be used in documents using this
    style sheet:
-
        address - use the #footer style instead
        q       - use &ldquo; and &rdquo; instead
 */
@@ -396,7 +391,7 @@ table.simple th.right {
    background:      white;
    margin:          0 0 0 1.2em;
    padding:         0.25em 1.5em 0.5em 1em;
-   border-left:     1px solid #999999;
+   /* border-left:     1px solid #999999; */
 }
 
 #main h1 {			/* Should be used once, following navhead */
@@ -489,7 +484,7 @@ table.simple th.right {
    line-height:     1.25;
    margin:          0 0 0.75em 1.5em;
    padding:         0.5em 1em;
-   border:          1px solid #999999;
+   border:          0px solid #999999;
    float:           right;
    clear:           right;
 }
@@ -589,7 +584,7 @@ table.simple th.right {
 
 #header {			/* Warning: not printed out on paper */
    color:           #4d5c45;
-   background:      #bbbbaa    /* #6688bb;   */                               /* Here the color of a VISIBLE BACKGROUND */
+   background:      #ffffff    /* #6688bb;   */                               /* Here the color of a VISIBLE BACKGROUND */
 }
 
 #header a:link,
@@ -668,8 +663,9 @@ table.simple th.right {
 /* Subheader for global links */
 
 #header div.subheader {
-   color:           white;
-   background:      #444444;                                           /* Here the color of a VISIBLE BAR */
+   text-align:      justify;
+   color:           black;
+   background:      lightblue;                                           /* Here the color of a VISIBLE BAR */
    margin:          0;
    padding:         0.25em 1.5em 0.5em 0.5em; /* For IE/Win */
    clear:           both;
@@ -682,8 +678,8 @@ table.simple th.right {
 #header div.subheader a:link,
 #header div.subheader a:visited {
    font-weight:     bolder;
-   color:           white;
-   background:      transparent;
+   color:           #b20000;
+   background:      yellow;
    margin:          0;
    padding:         0 0.5em;
 }
@@ -691,7 +687,7 @@ table.simple th.right {
 #header div.subheader .highlight,
 #header div.subheader a.highlight:link,
 #header div.subheader a.highlight:visited {
-   color:           #a26345;
+   color:           #0f0f0f;                                          /* Here the color of the VISIBLE text in the bar */
    background:      transparent;
 }
 
@@ -700,7 +696,7 @@ table.simple th.right {
    margin-left: 20px;
    width: 45%;
    height: 200px;
-   background: #F0F0F0;
+   background: #ffffff;                /* Here the color of a VISIBLE BOX in the header */   
    float: left;
 }
 
@@ -779,7 +775,7 @@ table.simple th.right {
    font-size:       90%;
    text-align:      left;
    color:           white;
-   background:      #000000;                                        /* Here the color of the VISIBLE FOOTER BAR */
+   background:      #ffffff;                                        /* Here the color of the VISIBLE FOOTER BAR */
    margin:          0;
    padding:         0.5em 1.67em 0.5em 15.25em;
    clear:           both;
@@ -797,6 +793,5 @@ table.simple th.right {
 }
 
 /* End of the Sinorcaish style sheet */
-
 
 

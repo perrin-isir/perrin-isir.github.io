@@ -1,0 +1,24 @@
+
+<table style="font-size:16px" WIDTH="300" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%">
+<form action="" id="quicksearch">
+<input style="font-size:16px; text-align:right" size="49" type="text" id="qs_field" autocomplete="off" placeholder="Type to search..." /> <input style="font-size:16px" type="button" onclick="clearQS()" value="clear" /><br>
+<span style="font-size:16px" id="searchstat"> <span id="stat">0</span></span>
+<div style="font-size:16px" id="showsettings" onclick="toggleSettings()">...</div>
+<div id="settings" class="hidden">
+<ul>
+<li><input type="checkbox" class="search_setting" id="opt_useRegExp" onchange="updateSetting(this)"><label style="font-size:16px" for="opt_useRegExp"> use RegExp</label></li>
+<li><input type="checkbox" class="search_setting" id="opt_noAccents" onchange="updateSetting(this)"><label style="font-size:16px" for="opt_noAccents"> ignore accents</label></li>
+<li><input type="checkbox" class="search_setting" id="opt_searchAbs" onchange="updateSetting(this)"><label style="font-size:16px" for="opt_searchAbs"> include abstract</label></li>
+<li><input type="checkbox" class="search_setting" id="opt_searchRev" onchange="updateSetting(this)"><label style="font-size:16px" for="opt_searchRev"> include review</label></li>
+</ul>
+</div>
+</form>
+</td>
+</tr>
+
+</table>
+
+<table style="font-size:16px" bgcolor="#F5F6CE" WIDTH="300" id="qs_table" border="0" cellspacing="0" cellpadding="0">
+
