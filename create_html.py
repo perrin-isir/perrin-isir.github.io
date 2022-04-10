@@ -26,9 +26,9 @@ for line in firstpart:
 print("<script type=\"text/javascript\">", file=wfile)
 print("function toggleVisibility(x) { var e = document.getElementById(x); if(e.style.display == 'block') e.style.display = 'none'; else e.style.display = 'block';}", file=wfile)
 print("</script>", file=wfile)
-print("<div id=\"content\" style=\"font-size:20px\">[Content: links to ar5iv versions of some interesting articles] <a href=\"#\" onclick=\"toggleVisibility('links')\">[TAGS on/off]</a></div>", file=wfile)
+print("<div id=\"content\" style=\"font-size:2.0vh\">[Content: links to ar5iv versions of some interesting articles] <a href=\"#\" onclick=\"toggleVisibility('links')\">[TAGS on/off]</a></div>", file=wfile)
 print("<div id=\"links\" style=\"display:block\">", file=wfile)
-print("<table style=\"font-size:20px\"><td width=\"100\%\"><i>", file=wfile)
+print("<table style=\"font-size:2.0vh\"><td width=\"100\%\"><i>", file=wfile)
 # sortedtags = []
 # for x in listtags:
 #     sortedtags.append(listtags[x])
