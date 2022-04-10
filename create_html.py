@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 import re
 tree = ET.parse('./scidox.reflib')
 root = tree.getroot()
-wfile = open('./scidox.html', 'w+')
+wfile = open('./index.html', 'w+')
 container = root.findall("./doclist/doc")
 # tags = root.findall("./taglist/tag")
 # listtags={}
@@ -35,7 +35,7 @@ print("<table style=\"font-size:16px\"><td width=\"100\%\"><i>", file=wfile)
 sortedtags = listtags.copy()
 sortedtags.sort()
 for x in sortedtags:
-    print("<a href=\"scidox.html?search=&quot;[^]*{" + x + "}&quot;\">" + x + " /</a>", file=wfile)
+    print("<a href=\"index.html?search=&quot;[^]*{" + x + "}&quot;\">" + x + " /</a>", file=wfile)
 print("</i></td></table>", file=wfile)
 print("</div>", file=wfile)
 
