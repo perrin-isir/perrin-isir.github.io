@@ -80,7 +80,7 @@ for d in data:
     #       tag.append(x.text.encode('ascii', 'xmlcharrefreplace'))
     i += 1
     print("<tr id=\"", str(i), "\" class=\"entry\"><td>", "<a href=\"" + url.decode('UTF-8') + "\"><div style=\"height:100%;width:100%\"><small>", file=wfile)
-    print("<font color=\"black\">", "\n&nbsp; &bull;<b/>", title.decode('UTF-8').replace('{', '').replace('}', ''), "("+year.decode('UTF-8')+")</b>", "&nbsp; - &nbsp;",  authors.decode('UTF-8'), "&nbsp; - &nbsp;", url.decode('UTF-8'), "&nbsp; - &nbsp;", dockey.decode('UTF-8'), "&nbsp; - &nbsp;", file=wfile)
+    print("<font color=\"black\">", "\n&nbsp; &bull;<b/>", title.decode('UTF-8').replace('{', '').replace('}', ''), "("+year.decode('UTF-8')+")</b>", "&nbsp; - &nbsp;",  authors.decode('UTF-8'), "&nbsp; - &nbsp;", dockey.decode('UTF-8'), "&nbsp; - &nbsp;", file=wfile)
     for tg in tag:
             print("{" + tg.decode('UTF-8') + "}", file=wfile)
     print("</small></font></div></a></td></tr>", file=wfile)
