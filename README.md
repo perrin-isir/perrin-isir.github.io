@@ -4,6 +4,6 @@
 
 2) Run 'arxiv2bib < arxiv_id_list.txt > biblio.bib' to generate the bib file. 
 
-3) Open scidox.reflib in Referencer, import biblio.bib, and assign tags to the refs.
+3) With Referencer, create a new library, import biblio.bib, and save the library as scidox.reflib.
 
-4) Run 'python create_html.py' to generate scidox.html
+4) Run 'python create_html.py' to generate index.html

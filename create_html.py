@@ -1,15 +1,17 @@
-# PYTHON2.7
 import xml.etree.ElementTree as ET
+import re
 tree = ET.parse('./scidox.reflib')
 root = tree.getroot()
 wfile = open('./scidox.html', 'w+')
 container = root.findall("./doclist/doc")
-tags = root.findall("./taglist/tag")
-listtags={}
-for t in tags:
-    a = t.findall("./uid")[0].text.encode('ascii', 'xmlcharrefreplace')
-    b = t.findall("./name")[0].text.encode('ascii', 'xmlcharrefreplace')
-    listtags[a.decode('UTF-8')] = b.decode('UTF-8')
+# tags = root.findall("./taglist/tag")
+# listtags={}
+# for t in tags:
+#     a = t.findall("./uid")[0].text.encode('ascii', 'xmlcharrefreplace')
+#     b = t.findall("./name")[0].text.encode('ascii', 'xmlcharrefreplace')
+#     listtags[a.decode('UTF-8')] = b.decode('UTF-8')
+
+listtags = ['explor', 'robot', 'reinforcement', 'modeling', 'kinematics', 'humanoid', 'control', 'deep', 'meta', 'optim', 'theory', 'hierarchical', 'motion planning', 'gradient', 'skill', 'multi-task', 'explainab', 'goal-conditioned', 'entropy', 'diversity', 'intrinsic', 'unsupervised', 'distillation', 'hybrid', 'imitation', 'open-ended', 'simulation', 'population', 'sparse', 'replay', 'on-policy', 'off-policy', 'few-shot', 'model-based', 'transfer']
 data = []
 #names = []
 for doc in container:
@@ -24,12 +26,13 @@ for line in firstpart:
 print("<script type=\"text/javascript\">", file=wfile)
 print("function toggleVisibility(x) { var e = document.getElementById(x); if(e.style.display == 'block') e.style.display = 'none'; else e.style.display = 'block';}", file=wfile)
 print("</script>", file=wfile)
-print("<center><a href=\"#\" onclick=\"toggleVisibility('links')\">LINKS</a></center>", file=wfile)
+print("[Content: links to ar5iv versions of some interesting articles] <a href=\"#\" onclick=\"toggleVisibility('links')\">[TAGS on/off]</a>", file=wfile)
 print("<div id=\"links\" style=\"display:block\">", file=wfile)
 print("<table style=\"font-size:16px\"><td width=\"100\%\"><i>", file=wfile)
-sortedtags = []
-for x in listtags:
-    sortedtags.append(listtags[x])
+# sortedtags = []
+# for x in listtags:
+#     sortedtags.append(listtags[x])
+sortedtags = listtags.copy()
 sortedtags.sort()
 for x in sortedtags:
     print("<a href=\"scidox.html?search=&quot;[^]*{" + x + "}&quot;\">" + x + " /</a>", file=wfile)
@@ -59,20 +62,27 @@ for d in data:
         if x.attrib['key'] == 'Url' or x.attrib['key'] == 'url':
           if x.text is not None:
             url = x.text.encode('ascii', 'xmlcharrefreplace').replace(b'arxiv', b'ar5iv')
+        if x.attrib['key'] == 'Abstract' or x.attrib['key'] == 'abstract':
+          if x.text is not None:
+            abstract = x.text
+            for tg in sortedtags:
+              if re.search(tg, abstract, re.IGNORECASE) or re.search(tg.replace('-', ' '), abstract, re.IGNORECASE):
+                tag.append(tg.encode('ascii', 'xmlcharrefreplace'))
+            url = x.text.encode('ascii', 'xmlcharrefreplace').replace(b'arxiv', b'ar5iv')
     for x in doc.findall("./bib_year"):
         if x.text is not None:
           year = x.text.encode('ascii', 'xmlcharrefreplace')
     for x in doc.findall("./key"):
         if x.text is not None:
           dockey = x.text.encode('ascii', 'xmlcharrefreplace')
-    for x in doc.findall("./tagged"):
-        if x.text is not None:
-          tag.append(x.text.encode('ascii', 'xmlcharrefreplace'))
+    # for x in doc.findall("./tagged"):
+    #     if x.text is not None:
+    #       tag.append(x.text.encode('ascii', 'xmlcharrefreplace'))
     i += 1
     print("<tr id=\"", str(i), "\" class=\"entry\"><td>", "<a href=\"" + url.decode('UTF-8') + "\"><div style=\"height:100%;width:100%\"><small>", file=wfile)
     print("<font color=\"black\">", "\n&nbsp; &bull;<b/>", title.decode('UTF-8').replace('{', '').replace('}', ''), "("+year.decode('UTF-8')+")</b>", "&nbsp; - &nbsp;",  authors.decode('UTF-8'), "&nbsp; - &nbsp;", url.decode('UTF-8'), "&nbsp; - &nbsp;", dockey.decode('UTF-8'), "&nbsp; - &nbsp;", file=wfile)
     for tg in tag:
-            print("{" + listtags[tg.decode('UTF-8')] + "}", file=wfile)
+            print("{" + tg.decode('UTF-8') + "}", file=wfile)
     print("</small></font></div></a></td></tr>", file=wfile)
      
 firstpart = open('./index_files/last_part.html', 'r')

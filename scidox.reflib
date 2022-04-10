@@ -1,209 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <library>
-	<manage_target braces="false" utf8="false">biblio.bib</manage_target>
+	<manage_target braces="false" utf8="false"></manage_target>
 	<library_folder monitor="false"></library_folder>
-	<taglist>
-		<tag>
-			<uid>10</uid>
-			<name>robotics: modeling</name>
-		</tag>
-		<tag>
-			<uid>17</uid>
-			<name>robotics: inverse kinematics</name>
-		</tag>
-		<tag>
-			<uid>23</uid>
-			<name>robotics: motion planning</name>
-		</tag>
-		<tag>
-			<uid>24</uid>
-			<name>ML: optimization</name>
-		</tag>
-		<tag>
-			<uid>27</uid>
-			<name>robotics: control</name>
-		</tag>
-		<tag>
-			<uid>37</uid>
-			<name>robotics: humanoid control</name>
-		</tag>
-		<tag>
-			<uid>39</uid>
-			<name>RL: control</name>
-		</tag>
-		<tag>
-			<uid>40</uid>
-			<name>ML: deep</name>
-		</tag>
-		<tag>
-			<uid>42</uid>
-			<name>RL: general</name>
-		</tag>
-		<tag>
-			<uid>49</uid>
-			<name>robotics: optimal control</name>
-		</tag>
-		<tag>
-			<uid>50</uid>
-			<name>ML: representations</name>
-		</tag>
-		<tag>
-			<uid>51</uid>
-			<name>ML: GD variants</name>
-		</tag>
-		<tag>
-			<uid>52</uid>
-			<name>RL: transfer</name>
-		</tag>
-		<tag>
-			<uid>53</uid>
-			<name>RL: meta</name>
-		</tag>
-		<tag>
-			<uid>55</uid>
-			<name>ML: theory</name>
-		</tag>
-		<tag>
-			<uid>56</uid>
-			<name>RL: robotics</name>
-		</tag>
-		<tag>
-			<uid>58</uid>
-			<name>RL: hierarchical</name>
-		</tag>
-		<tag>
-			<uid>59</uid>
-			<name>RL: skills learning</name>
-		</tag>
-		<tag>
-			<uid>60</uid>
-			<name>ML: evo</name>
-		</tag>
-		<tag>
-			<uid>66</uid>
-			<name>RL: humanoid control</name>
-		</tag>
-		<tag>
-			<uid>67</uid>
-			<name>RL: multi-task</name>
-		</tag>
-		<tag>
-			<uid>69</uid>
-			<name>RL: exploration</name>
-		</tag>
-		<tag>
-			<uid>70</uid>
-			<name>RL: model based</name>
-		</tag>
-		<tag>
-			<uid>72</uid>
-			<name>ML: understanding DL</name>
-		</tag>
-		<tag>
-			<uid>73</uid>
-			<name>RL: deep</name>
-		</tag>
-		<tag>
-			<uid>75</uid>
-			<name>ML: feature selection</name>
-		</tag>
-		<tag>
-			<uid>76</uid>
-			<name>ML: XAI</name>
-		</tag>
-		<tag>
-			<uid>77</uid>
-			<name>RL: catastrophic forgetting</name>
-		</tag>
-		<tag>
-			<uid>78</uid>
-			<name>RL: learn to explore</name>
-		</tag>
-		<tag>
-			<uid>79</uid>
-			<name>RL: few shot</name>
-		</tag>
-		<tag>
-			<uid>80</uid>
-			<name>RL: distributional</name>
-		</tag>
-		<tag>
-			<uid>81</uid>
-			<name>RL: goal conditioned</name>
-		</tag>
-		<tag>
-			<uid>82</uid>
-			<name>RL: entropy</name>
-		</tag>
-		<tag>
-			<uid>83</uid>
-			<name>RL: diversity</name>
-		</tag>
-		<tag>
-			<uid>84</uid>
-			<name>RL: motion planning</name>
-		</tag>
-		<tag>
-			<uid>85</uid>
-			<name>RL: representations</name>
-		</tag>
-		<tag>
-			<uid>86</uid>
-			<name>RL: on policy</name>
-		</tag>
-		<tag>
-			<uid>87</uid>
-			<name>RL: intrinsic motivation</name>
-		</tag>
-		<tag>
-			<uid>88</uid>
-			<name>RL: sparse reward</name>
-		</tag>
-		<tag>
-			<uid>89</uid>
-			<name>RL: curriculum</name>
-		</tag>
-		<tag>
-			<uid>90</uid>
-			<name>RL: hindsight replay</name>
-		</tag>
-		<tag>
-			<uid>91</uid>
-			<name>RL: unsupervised</name>
-		</tag>
-		<tag>
-			<uid>93</uid>
-			<name>RL: regression based</name>
-		</tag>
-		<tag>
-			<uid>94</uid>
-			<name>RL: object oriented</name>
-		</tag>
-		<tag>
-			<uid>95</uid>
-			<name>RL: hybrid</name>
-		</tag>
-		<tag>
-			<uid>97</uid>
-			<name>RL: distillation</name>
-		</tag>
-		<tag>
-			<uid>98</uid>
-			<name>RL: imitation</name>
-		</tag>
-		<tag>
-			<uid>99</uid>
-			<name>RL: population based</name>
-		</tag>
-		<tag>
-			<uid>100</uid>
-			<name>RL: open ended</name>
-		</tag>
-		<tag>
-			<uid>101</uid>
-			<name>robotics: physics simulation</name>
-		</tag>
-	</taglist>
+	<taglist/>
 	<doclist>
 		<doc>
 			<filename></filename>
@@ -230,7 +29,6 @@
 			<filename></filename>
 			<key>2105.00371v1</key>
 			<notes></notes>
-			<tagged>66</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Discovering Diverse Athletic Jumping Strategies</bib_title>
@@ -274,7 +72,6 @@
 			<filename></filename>
 			<key>1706.03762v5</key>
 			<notes></notes>
-			<tagged>40</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Attention Is All You Need</bib_title>
@@ -339,7 +136,6 @@
 			<filename></filename>
 			<key>1504.04909v1</key>
 			<notes></notes>
-			<tagged>60</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Illuminating search spaces by mapping elites</bib_title>
@@ -424,7 +220,6 @@
 			<filename></filename>
 			<key>1412.1897v4</key>
 			<notes></notes>
-			<tagged>40</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Deep Neural Networks are Easily Fooled: High Confidence Predictions for Unrecognizable Images</bib_title>
@@ -446,7 +241,6 @@
 			<filename></filename>
 			<key>1106.3708v4</key>
 			<notes></notes>
-			<tagged>24</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Information-Geometric Optimization Algorithms: A Unifying Picture via Invariance Principles</bib_title>
@@ -511,7 +305,6 @@
 			<filename></filename>
 			<key>1502.03167v3</key>
 			<notes></notes>
-			<tagged>40</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift</bib_title>
@@ -554,7 +347,6 @@
 			<filename></filename>
 			<key>1901.11530v2</key>
 			<notes></notes>
-			<tagged>85</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>A Geometric Perspective on Optimal Representations for Reinforcement Learning</bib_title>
@@ -723,7 +515,6 @@
 			<filename></filename>
 			<key>1412.1193v11</key>
 			<notes></notes>
-			<tagged>51</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>New insights and perspectives on the natural gradient method</bib_title>
@@ -745,7 +536,6 @@
 			<filename></filename>
 			<key>2006.04678v2</key>
 			<notes></notes>
-			<tagged>98</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Primal Wasserstein Imitation Learning</bib_title>
@@ -809,7 +599,6 @@
 			<filename></filename>
 			<key>1010.3013v1</key>
 			<notes></notes>
-			<tagged>27</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Invariant Funnels around Trajectories using Sum-of-Squares Programming</bib_title>
@@ -1086,7 +875,6 @@
 			<filename></filename>
 			<key>1211.0358v2</key>
 			<notes></notes>
-			<tagged>40</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Deep Gaussian Processes</bib_title>
@@ -1235,7 +1023,6 @@
 			<filename></filename>
 			<key>1311.1839v2</key>
 			<notes></notes>
-			<tagged>37</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>An Efficiently Solvable Quadratic Program for Stabilizing Dynamic Locomotion</bib_title>
@@ -1599,7 +1386,6 @@
 			<filename></filename>
 			<key>1504.00702v5</key>
 			<notes></notes>
-			<tagged>73</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>End-to-End Training of Deep Visuomotor Policies</bib_title>
@@ -1642,8 +1428,6 @@
 			<filename></filename>
 			<key>1412.7009v3</key>
 			<notes></notes>
-			<tagged>50</tagged>
-			<tagged>40</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Generative Class-conditional Autoencoders</bib_title>
@@ -1686,7 +1470,6 @@
 			<filename></filename>
 			<key>1212.1524v2</key>
 			<notes></notes>
-			<tagged>40</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Layer-wise learning of deep generative models</bib_title>
@@ -1708,7 +1491,6 @@
 			<filename></filename>
 			<key>2109.08522v1</key>
 			<notes></notes>
-			<tagged>60</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Dynamics-Aware Quality-Diversity for Efficient Learning of Skill Repertoires</bib_title>
@@ -2003,7 +1785,6 @@
 			<filename></filename>
 			<key>1301.3584v7</key>
 			<notes></notes>
-			<tagged>51</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Revisiting Natural Gradient for Deep Networks</bib_title>
@@ -2025,7 +1806,6 @@
 			<filename></filename>
 			<key>2107.12808v2</key>
 			<notes></notes>
-			<tagged>100</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Open-Ended Learning Leads to Generally Capable Agents</bib_title>
@@ -2152,7 +1932,6 @@
 			<filename></filename>
 			<key>1910.01215v4</key>
 			<notes></notes>
-			<tagged>53</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>ES-MAML: Simple Hessian-Free Meta Learning</bib_title>
@@ -2658,8 +2437,6 @@
 			<filename></filename>
 			<key>1506.02438v6</key>
 			<notes></notes>
-			<tagged>73</tagged>
-			<tagged>86</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>High-Dimensional Continuous Control Using Generalized Advantage Estimation</bib_title>
@@ -2681,7 +2458,6 @@
 			<filename></filename>
 			<key>2005.10934v3</key>
 			<notes></notes>
-			<tagged>69</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>LEAF: Latent Exploration Along the Frontier</bib_title>
@@ -2788,7 +2564,6 @@
 			<filename></filename>
 			<key>0911.4625v1</key>
 			<notes></notes>
-			<tagged>49</tagged>
 			<bib_type>Article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Hamilton-Jacobi formulation for reach-avoid differential games</bib_title>
