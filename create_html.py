@@ -11,7 +11,7 @@ container = root.findall("./doclist/doc")
 #     b = t.findall("./name")[0].text.encode('ascii', 'xmlcharrefreplace')
 #     listtags[a.decode('UTF-8')] = b.decode('UTF-8')
 
-listtags = ['explor', 'robot', 'reinforcement', 'modeling', 'kinematics', 'humanoid', 'control', 'deep', 'meta', 'optim', 'theory', 'hierarchical', 'motion planning', 'gradient', 'skill', 'multi-task', 'explainab', 'goal-conditioned', 'entropy', 'diversity', 'intrinsic', 'unsupervised', 'distillation', 'hybrid', 'network', 'imitation', 'open-ended', 'simulation', 'population', 'sparse', 'replay', 'on-policy', 'off-policy', 'few-shot', 'model-based', 'transfer']
+listtags = ['explor', 'robot', 'reinforcement', 'model', 'kinematics', 'humanoid', 'control', 'deep', 'meta', 'optim', 'theory', 'hierarchical', 'motion planning', 'gradient', 'skill', 'multi-task', 'explainab', 'goal-conditioned', 'entropy', 'diversity', 'intrinsic', 'unsupervised', 'distillation', 'hybrid', 'network', 'imitation', 'open-ended', 'simulation', 'population', 'sparse', 'replay', 'on-policy', 'off-policy', 'few-shot', 'transfer']
 data = []
 #names = []
 for doc in container:
