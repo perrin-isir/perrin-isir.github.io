@@ -11,13 +11,13 @@ container = root.findall("./doclist/doc")
 #     b = t.findall("./name")[0].text.encode('ascii', 'xmlcharrefreplace')
 #     listtags[a.decode('UTF-8')] = b.decode('UTF-8')
 
-listtags = ['explor', 'robot', 'reinforcement', 'model', 'kinematics', 'humanoid', 'control', 'deep', 'meta', 'optim', 'theory', 'hierarchical', 'motion planning', 'gradient', 'skill', 'multi-task', 'explainab', 'goal-conditioned', 'entropy', 'diversity', 'intrinsic', 'unsupervised', 'distillation', 'hybrid', 'network', 'imitation', 'open-ended', 'simulation', 'population', 'sparse', 'replay', 'on-policy', 'off-policy', 'few-shot', 'transfer']
+listtags = ['lifelong', 'primal', 'evolution', 'dual', 'self-supervised', 'contrastive', 'compos', 'explor', 'robot', 'reinforce', 'model', 'kinematic', 'humanoid', 'control', 'deep', 'meta', 'optim', 'theory', 'hierarchical', 'motion planning', 'gradient', 'skill', 'multi-task', 'explainab', 'goal-conditioned', 'entropy', 'diversity', 'intrinsic', 'unsupervised', 'distill', 'hybrid', 'network', 'imitation', 'open-ended', 'simul', 'population', 'sparse', 'replay', 'on-policy', 'off-policy', 'few-shot', 'transfer']
 data = []
 #names = []
 for doc in container:
     key = doc.findtext("./bib_authors") + '/' + doc.findtext("./bib_title")
     data.append((key,doc))
-data.sort()
+data.sort()  # error if there are duplicate keys
 
 firstpart = open('./index_files/first_part.html', 'r')
 for line in firstpart:
