@@ -26,7 +26,7 @@ for line in firstpart:
 print("<script type=\"text/javascript\">", file=wfile)
 print("function toggleVisibility(x) { var e = document.getElementById(x); if(e.style.display == 'block') e.style.display = 'none'; else e.style.display = 'block';}", file=wfile)
 print("</script>", file=wfile)
-print("<div id=\"content\" style=\"font-size:2.0vh\">[Content: links to ar5iv versions of some interesting articles] <a href=\"#\" onclick=\"toggleVisibility('links')\">[TAGS on/off]</a></div>", file=wfile)
+print("<div id=\"content\" style=\"font-size:2.0vh\">[Links to arXiv/ar5iv articles] <a href=\"#\" onclick=\"toggleVisibility('links')\">[TAGS on/off]</a></div>", file=wfile)
 print("<div id=\"links\" style=\"display:block\">", file=wfile)
 print("<table style=\"font-size:2.0vh\"><td width=\"100\%\"><i>", file=wfile)
 # sortedtags = []
@@ -49,6 +49,7 @@ for d in data:
     title = ""
     authors = ""
     url = ""
+    url_ar5iv = ""
     year = ""
     dockey = ""
     tag = []
@@ -61,14 +62,16 @@ for d in data:
     for x in doc.findall("./bib_extra"):
         if x.attrib['key'] == 'Url' or x.attrib['key'] == 'url':
           if x.text is not None:
-            url = x.text.encode('ascii', 'xmlcharrefreplace').replace(b'arxiv', b'ar5iv')
+            url = x.text.encode('ascii', 'xmlcharrefreplace')
+            url_ar5iv = url.replace(b'arxiv', b'ar5iv')
         if x.attrib['key'] == 'Abstract' or x.attrib['key'] == 'abstract':
           if x.text is not None:
             abstract = x.text
             for tg in sortedtags:
               if re.search(tg, abstract, re.IGNORECASE) or re.search(tg.replace('-', ' '), abstract, re.IGNORECASE):
                 tag.append(tg.encode('ascii', 'xmlcharrefreplace'))
-            url = x.text.encode('ascii', 'xmlcharrefreplace').replace(b'arxiv', b'ar5iv')
+            url = x.text.encode('ascii', 'xmlcharrefreplace')
+            url_ar5iv = url.replace(b'arxiv', b'ar5iv')
     for x in doc.findall("./bib_year"):
         if x.text is not None:
           year = x.text.encode('ascii', 'xmlcharrefreplace')
@@ -79,11 +82,15 @@ for d in data:
     #     if x.text is not None:
     #       tag.append(x.text.encode('ascii', 'xmlcharrefreplace'))
     i += 1
-    print("<tr id=\"", str(i), "\" class=\"entry\"><td>", "<a href=\"" + url.decode('UTF-8') + "\"><div style=\"height:100%;width:100%\"><small>", file=wfile)
-    print("<font color=\"black\">", "\n&nbsp; &bull;<b/>", title.decode('UTF-8').replace('{', '').replace('}', ''), "("+year.decode('UTF-8')+")</b>", "&nbsp; - &nbsp;",  authors.decode('UTF-8'), "&nbsp; - &nbsp;", dockey.decode('UTF-8'), "&nbsp; - &nbsp;", file=wfile)
+    print("<tr id=\"", str(i), "\" class=\"entry\"><td>", "<div style=\"height:100%;width:100%\"><a href=\"" + url.decode('UTF-8') + "\"><small>", file=wfile)
+    print("<font color=\"black\">", "\n&nbsp; &bull;<b/>", title.decode('UTF-8').replace('{', '').replace('}', ''), "("+year.decode('UTF-8')+")</b>", file=wfile)
+    print("</small></font></a>", file=wfile)
+    print("&nbsp; - &nbsp;", file=wfile)
+    print("<a href=\"" + url_ar5iv.decode('UTF-8') + "\"><small>", file=wfile)
+    print("<font color=\"black\">", authors.decode('UTF-8'), "&nbsp; - &nbsp;", dockey.decode('UTF-8'), "&nbsp; - &nbsp;", file=wfile)
     for tg in tag:
             print("{" + tg.decode('UTF-8') + "}", file=wfile)
-    print("</small></font></div></a></td></tr>", file=wfile)
+    print("</small></font></a></div></td></tr>", file=wfile)
      
 firstpart = open('./index_files/last_part.html', 'r')
 for line in firstpart:
