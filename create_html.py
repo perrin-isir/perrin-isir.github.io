@@ -29,10 +29,9 @@ print(
     "function toggleVisibility(x) { var e = document.getElementById(x); if(e.style.display == 'block') e.style.display = 'none'; else e.style.display = 'block';}",
     file=wfile)
 print("</script>", file=wfile)
-# print(
-#     "<div style=\"font-size:1em\">[Click on title to open arXiv / click on authors to open ar5iv] <a href=\"#\" onclick=\"toggleVisibility('links')\">[TAGS on/off]</a></div>",
-#     file=wfile)
-print("<div>header test</div>", file=wfile)
+print(
+    "<div style=\"font-size:1rem\">[Click on title to open arXiv / click on authors to open ar5iv] <a href=\"#\" onclick=\"toggleVisibility('links')\">[TAGS on/off]</a></div>",
+    file=wfile)
 print("<div id=\"links\" style=\"display:none;\">", file=wfile)
 print("<table style=\"font-size:1rem\"><td width=\"100\%\"><i>", file=wfile)
 # sortedtags = []
@@ -91,29 +90,28 @@ for d in data:
     #     if x.text is not None:
     #       tag.append(x.text.encode('ascii', 'xmlcharrefreplace'))
     i += 1
-    print("<tr id=\"", str(i), "\" class=\"entry\">test</tr><br>", file=wfile)
-    # print("<tr id=\"", str(i), "\" class=\"entry\"><td>", file=wfile)
-    # print("<a onclick=\"toggleVisibility('abstract"
-    #      + str(i)
-    #      + "');\">&bull; /abstract/</a><a href=\"" + url.decode(
-    #          'UTF-8') + "\">", file=wfile)
-    # print("<b/>",
-    #       title.decode('UTF-8').replace('{', '').replace('}', ''),
-    #       "(" + year.decode('UTF-8') + ")</b>", file=wfile)
-    # print("</a>", file=wfile)
-    # print("&nbsp; - &nbsp;", file=wfile)
-    # print("<I><a href=\"" + url_ar5iv.decode('UTF-8') + "\">",
-    #       file=wfile)
-    # print(authors.decode('UTF-8'), "&nbsp;", file=wfile)
-    # print("</a></I>&nbsp;", file=wfile)
-    # print("<div id=\"abstract"
-    #      + str(i)
-    #      + "\" style=\"font-size: 1rem; display: none\">", file=wfile)
-    # print("<u><I>", dockey.decode('UTF-8'), "&nbsp; - &nbsp;", file=wfile)
-    # for tg in tag:
-    #     print("{" + tg.decode('UTF-8') + "}", file=wfile)
-    # print("</I></u><br>", abstract.decode('UTF-8'), "<br><br></div>", file=wfile)
-    # print("</td></tr>", file=wfile)
+    print("<tr id=\"", str(i), "\" class=\"entry\"><td>", file=wfile)
+    print("<a onclick=\"toggleVisibility('abstract"
+         + str(i)
+         + "');\">&bull; /abstract/</a><a href=\"" + url.decode(
+             'UTF-8') + "\">", file=wfile)
+    print("<b/>",
+         title.decode('UTF-8').replace('{', '').replace('}', ''),
+         "(" + year.decode('UTF-8') + ")</b>", file=wfile)
+    print("</a>", file=wfile)
+    print("&nbsp; - &nbsp;", file=wfile)
+    print("<I><a href=\"" + url_ar5iv.decode('UTF-8') + "\">",
+         file=wfile)
+    print(authors.decode('UTF-8'), "&nbsp;", file=wfile)
+    print("</a></I>&nbsp;", file=wfile)
+    print("<div id=\"abstract"
+         + str(i)
+         + "\" style=\"font-size: 1rem; display: none\">", file=wfile)
+    print("<u><I>", dockey.decode('UTF-8'), "&nbsp; - &nbsp;", file=wfile)
+    for tg in tag:
+         print("{" + tg.decode('UTF-8') + "}", file=wfile)
+    print("</I></u><br>", abstract.decode('UTF-8'), "<br><br></div>", file=wfile)
+    print("</td></tr>", file=wfile)
 
 firstpart = open('./index_files/last_part.html', 'r')
 for line in firstpart:
