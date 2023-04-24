@@ -91,7 +91,7 @@ for d in data:
     #       tag.append(x.text.encode('ascii', 'xmlcharrefreplace'))
     i += 1
     print("<tr id=\"", str(i), "\" class=\"entry\"><td>",
-          "<div style=\"height:100%;width:100%\"><small><a href=\"" + url.decode(
+          "<div style=\"height:100%;width:100%\"><a href=\"" + url.decode(
               'UTF-8') + "\"><font color=\"black\">", file=wfile)
     print("\n&nbsp; &bull;<b/>",
           title.decode('UTF-8').replace('{', '').replace('}', ''),
@@ -107,9 +107,9 @@ for d in data:
 
     print("</I></font></a>&nbsp; - &nbsp;<a href=\"#\" onclick=\"toggleVisibility('abstract"
           + str(i)
-          + "'); return false;\">[abstract]</a></small></div><div id=\"abstract"
+          + "'); return false;\">[abstract]</a></div><div id=\"abstract"
           + str(i)
-          + "\" style=\"font-size:1rem; display: none\"><small>", abstract.decode('UTF-8'), "</small></div>", file=wfile)
+          + "\" style=\"font-size: 1rem; display: none\">", abstract.decode('UTF-8'), "</div>", file=wfile)
     print("</td></tr>", file=wfile)
 
 firstpart = open('./index_files/last_part.html', 'r')
