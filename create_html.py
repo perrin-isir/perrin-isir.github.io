@@ -108,7 +108,9 @@ for d in data:
     print("<I><a href=\"" + url_ar5iv.decode('UTF-8') + "\">",
          file=wfile)
     print(authors.decode('UTF-8'), "&nbsp;", file=wfile)
-    print("</a></I>&nbsp;", file=wfile)
+    print("</a></I><span style=\"float:right\"><a onclick=\"toggleVisibility('abstract"
+         + str(i)
+         + "');\">[|&bull;|]</a></span>", file=wfile)
     print("<a onclick=\"toggleVisibility('abstract"
          + str(i)
          + "');\"><div id=\"abstract"
