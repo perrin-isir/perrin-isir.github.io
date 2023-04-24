@@ -100,16 +100,16 @@ for d in data:
           "(" + year.decode('UTF-8') + ")</b>", file=wfile)
     print("</a>", file=wfile)
     print("&nbsp; - &nbsp;", file=wfile)
-    print("<a href=\"" + url_ar5iv.decode('UTF-8') + "\">",
+    print("<I><a href=\"" + url_ar5iv.decode('UTF-8') + "\">",
           file=wfile)
     print(authors.decode('UTF-8'), "&nbsp;", file=wfile)
-    print("</a>&nbsp;</div><div id=\"abstract"
+    print("</a></I>&nbsp;</div><div id=\"abstract"
           + str(i)
           + "\" style=\"font-size: 1rem; display: none\">", file=wfile)
     print("<u><I>", dockey.decode('UTF-8'), "&nbsp; - &nbsp;", file=wfile)
     for tg in tag:
         print("{" + tg.decode('UTF-8') + "}", file=wfile)
-    print("</I></u><br>", abstract.decode('UTF-8'), "</div>", file=wfile)
+    print("</I></u><br>", abstract.decode('UTF-8'), "<br><br></div>", file=wfile)
     print("</td></tr>", file=wfile)
 
 firstpart = open('./index_files/last_part.html', 'r')
