@@ -91,9 +91,7 @@ for d in data:
     #       tag.append(x.text.encode('ascii', 'xmlcharrefreplace'))
     i += 1
     print("<tr id=\"", str(i), "\" class=\"entry\"><td>",
-          "<a href=\"#\" onclick=\"toggleVisibility('abstract"
-          + str(i)
-          + "');\">&bull; [abstract]</a><a href=\"" + url.decode(
+          "<a href=\"#\" \">&bull; [abstract]</a><a href=\"" + url.decode(
               'UTF-8') + "\">", file=wfile)
     print("<b/>",
           title.decode('UTF-8').replace('{', '').replace('}', ''),
