@@ -91,7 +91,7 @@ for d in data:
     #       tag.append(x.text.encode('ascii', 'xmlcharrefreplace'))
     i += 1
     print("<tr id=\"", str(i), "\" class=\"entry\"><td>",
-          "<div style:\"font-size: 1rem\"><a href=\"#\" onclick=\"toggleVisibility('abstract"
+          "<a href=\"#\" onclick=\"toggleVisibility('abstract"
           + str(i)
           + "'); return false;\">&bull; [abstract]</a><a href=\"" + url.decode(
               'UTF-8') + "\">", file=wfile)
@@ -103,7 +103,7 @@ for d in data:
     print("<I><a href=\"" + url_ar5iv.decode('UTF-8') + "\">",
           file=wfile)
     print(authors.decode('UTF-8'), "&nbsp;", file=wfile)
-    print("</a></I>&nbsp;</div><div id=\"abstract"
+    print("</a></I>&nbsp;<div id=\"abstract"
           + str(i)
           + "\" style=\"font-size: 1rem; display: none\">", file=wfile)
     print("<u><I>", dockey.decode('UTF-8'), "&nbsp; - &nbsp;", file=wfile)
