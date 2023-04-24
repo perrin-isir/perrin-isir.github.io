@@ -98,12 +98,12 @@ for d in data:
     print("<b/>",
           title.decode('UTF-8').replace('{', '').replace('}', ''),
           "(" + year.decode('UTF-8') + ")</b>", file=wfile)
-    print("</a>", file=wfile)
-    print("&nbsp; - &nbsp;", file=wfile)
-    print("<I><a href=\"" + url_ar5iv.decode('UTF-8') + "\">",
-          file=wfile)
-    print(authors.decode('UTF-8'), "&nbsp;", file=wfile)
-    print("</a></I>&nbsp;", file=wfile)
+    # print("</a>", file=wfile)
+    # print("&nbsp; - &nbsp;", file=wfile)
+    # print("<I><a href=\"" + url_ar5iv.decode('UTF-8') + "\">",
+    #       file=wfile)
+    # print(authors.decode('UTF-8'), "&nbsp;", file=wfile)
+    # print("</a></I>&nbsp;", file=wfile)
     # print("<div id=\"abstract"
     #      + str(i)
     #      + "\" style=\"font-size: 1rem; display: none\">", file=wfile)
