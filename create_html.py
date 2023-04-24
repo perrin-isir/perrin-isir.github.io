@@ -90,14 +90,15 @@ for d in data:
     #     if x.text is not None:
     #       tag.append(x.text.encode('ascii', 'xmlcharrefreplace'))
     i += 1
-    print("<tr id=\"", str(i), "\" class=\"entry\"><td>", file=wfile)
+    print("<tr id=\"", str(i), "\" class=\"entry\">test</tr><br>", file=wfile)
+    # print("<tr id=\"", str(i), "\" class=\"entry\"><td>", file=wfile)
     # print("<a onclick=\"toggleVisibility('abstract"
     #      + str(i)
     #      + "');\">&bull; /abstract/</a><a href=\"" + url.decode(
     #          'UTF-8') + "\">", file=wfile)
-    print("<b/>",
-          title.decode('UTF-8').replace('{', '').replace('}', ''),
-          "(" + year.decode('UTF-8') + ")</b>", file=wfile)
+    # print("<b/>",
+    #       title.decode('UTF-8').replace('{', '').replace('}', ''),
+    #       "(" + year.decode('UTF-8') + ")</b>", file=wfile)
     # print("</a>", file=wfile)
     # print("&nbsp; - &nbsp;", file=wfile)
     # print("<I><a href=\"" + url_ar5iv.decode('UTF-8') + "\">",
@@ -111,7 +112,7 @@ for d in data:
     # for tg in tag:
     #     print("{" + tg.decode('UTF-8') + "}", file=wfile)
     # print("</I></u><br>", abstract.decode('UTF-8'), "<br><br></div>", file=wfile)
-    print("</td></tr>", file=wfile)
+    # print("</td></tr>", file=wfile)
 
 firstpart = open('./index_files/last_part.html', 'r')
 for line in firstpart:
