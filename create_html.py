@@ -30,10 +30,10 @@ print(
     file=wfile)
 print("</script>", file=wfile)
 print(
-    "<div id=\"content\" style=\"font-size:16px\">[Click on title to open arXiv / click on authors to open ar5iv] <a href=\"#\" onclick=\"toggleVisibility('links')\">[TAGS on/off]</a></div>",
+    "<div id=\"content\" style=\"font-size:1rem\">[Click on title to open arXiv / click on authors to open ar5iv] <a href=\"#\" onclick=\"toggleVisibility('links')\">[TAGS on/off]</a></div>",
     file=wfile)
 print("<div id=\"links\" style=\"display:none;\">", file=wfile)
-print("<table style=\"font-size:16px\"><td width=\"100\%\"><i>", file=wfile)
+print("<table style=\"font-size:1rem\"><td width=\"100\%\"><i>", file=wfile)
 # sortedtags = []
 # for x in listtags:
 #     sortedtags.append(listtags[x])
@@ -109,7 +109,7 @@ for d in data:
           + str(i)
           + "'); return false;\">[abstract]</a></small></div><div id=\"abstract"
           + str(i)
-          + "\" style=\"display: none\"><small>", abstract.decode('UTF-8'), "</small></div>", file=wfile)
+          + "\" style=\"font-size:1rem; display: none\"><small>", abstract.decode('UTF-8'), "</small></div>", file=wfile)
     print("</td></tr>", file=wfile)
 
 firstpart = open('./index_files/last_part.html', 'r')
