@@ -30,7 +30,7 @@ print(
     file=wfile)
 print("</script>", file=wfile)
 print(
-    "<div id=\"content\" style=\"font-size:1rem\">[Click on title to open arXiv / click on authors to open ar5iv] <a href=\"#\" onclick=\"toggleVisibility('links')\">[TAGS on/off]</a></div>",
+    "<div id=\"content\" style=\"font-size:1em\">[Click on title to open arXiv / click on authors to open ar5iv] <a href=\"#\" onclick=\"toggleVisibility('links')\">[TAGS on/off]</a></div>",
     file=wfile)
 print("<div id=\"links\" style=\"display:none;\">", file=wfile)
 print("<table style=\"font-size:1rem\"><td width=\"100\%\"><i>", file=wfile)
