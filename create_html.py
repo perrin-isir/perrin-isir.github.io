@@ -33,7 +33,7 @@ print("<script type=\"text/javascript\">", file=wfile)
 print("function change(x){ elt = document.getElementById(\"qs_field\"); elt.value = x; elt.dispatchEvent(new Event('change')); elt.dispatchEvent(new Event('change')); }", file=wfile)
 print("</script>", file=wfile)
 print(
-    "<div style=\"font-size:1rem\">Click on [&bull;] to show the abstract and on the abstract to hide it - Click on the title to open on arXiv - Click on the authors to open on ar5iv</div>",
+    "<div style=\"font-size:1rem\">Click on [|&bull;|] to show the abstract and on the abstract to hide it - Click on the title to open on arXiv - Click on the authors to open on ar5iv</div>",
     file=wfile)
 
 print("<div id=\"links\" style=\"display:none;\">", file=wfile)
@@ -98,7 +98,7 @@ for d in data:
     print("<tr id=\"", str(i), "\" class=\"entry\"><td>", file=wfile)
     print("<a onclick=\"toggleVisibility('abstract"
          + str(i)
-         + "');\">[&bull;]</a><a href=\"" + url.decode(
+         + "');\">[|&bull;|]</a><a href=\"" + url.decode(
              'UTF-8') + "\">", file=wfile)
     print("<b/>",
          title.decode('UTF-8').replace('{', '').replace('}', ''),
