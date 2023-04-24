@@ -768,7 +768,7 @@ function toggleSettings(){
 
 html {
 
-    font-size: 1.4vh;
+    font-size: max(1.4vh, 14px);
 
 }
 
@@ -807,7 +807,7 @@ main content.</a></div>
 
 
 
-<div id="main" style="font-size: 1rem">
+<div id="main">
 
 
 
@@ -823,9 +823,7 @@ main content.</a></div>
 
 
 
-<script type="text/javascript">
-function toggleVisibility(x) { var e = document.getElementById(x); if(e.style.display == 'block') e.style.display = 'none'; else e.style.display = 'block';}
-</script>
+
 header test 1
 <div>header test</div>
 <div id="links" style="display:none;">
