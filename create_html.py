@@ -93,7 +93,7 @@ for d in data:
     print("<tr id=\"", str(i), "\" class=\"entry\"><td>",
           "<a href=\"#\" onclick=\"toggleVisibility('abstract"
           + str(i)
-          + "'); return false;\">&bull; [abstract]</a><a href=\"" + url.decode(
+          + "');\">&bull; [abstract]</a><a href=\"" + url.decode(
               'UTF-8') + "\">", file=wfile)
     print("<b/>",
           title.decode('UTF-8').replace('{', '').replace('}', ''),
