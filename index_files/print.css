@@ -33,7 +33,7 @@
 
 body {
    font-family:     "Lucida Bright", "Georgia", "Bitstream Vera Serif", "Times New Roman", TimesNR, Times, Roman, serif;
-   font-size:       16px;
+   font-size:       1rem;
    color:           black;
    background:      white;
    margin:          0;
