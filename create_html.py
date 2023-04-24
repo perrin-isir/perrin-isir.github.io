@@ -90,11 +90,11 @@ for d in data:
     #     if x.text is not None:
     #       tag.append(x.text.encode('ascii', 'xmlcharrefreplace'))
     i += 1
-    print("<tr id=\"", str(i), "\" class=\"entry\"><td>",
-          "<a onclick=\"toggleVisibility('abstract"
-          + str(i)
-          + "');\">&bull; /abstract/</a><a href=\"" + url.decode(
-              'UTF-8') + "\">", file=wfile)
+    print("<tr id=\"", str(i), "\" class=\"entry\"><td>", file=wfile)
+    # print("<a onclick=\"toggleVisibility('abstract"
+    #      + str(i)
+    #      + "');\">&bull; /abstract/</a><a href=\"" + url.decode(
+    #          'UTF-8') + "\">", file=wfile)
     print("<b/>",
           title.decode('UTF-8').replace('{', '').replace('}', ''),
           "(" + year.decode('UTF-8') + ")</b>", file=wfile)
