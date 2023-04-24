@@ -12,14 +12,7 @@ container = root.findall("./doclist/doc")
 #     b = t.findall("./name")[0].text.encode('ascii', 'xmlcharrefreplace')
 #     listtags[a.decode('UTF-8')] = b.decode('UTF-8')
 
-listtags = ['lifelong', 'primal', 'evolution', 'dual', 'self-supervised', 'contrastive',
-            'compos', 'explor', 'robot', 'reinforce', 'model', 'kinematic', 'humanoid',
-            'control', 'deep', 'meta', 'optim', 'theory', 'hierarchical',
-            'motion planning', 'gradient', 'skill', 'multi-task', 'explainab',
-            'goal-conditioned', 'entropy', 'diversity', 'intrinsic', 'unsupervised',
-            'distill', 'hybrid', 'network', 'imitation', 'open-ended', 'simul',
-            'population', 'sparse', 'replay', 'on-policy', 'off-policy', 'few-shot',
-            'transfer']
+listtags = ['contrastive', 'control', 'deep', 'distill', 'diversity', 'entropy', 'evolution', 'explainable', 'exploration', 'few-shot', 'goal-conditioned', 'gradient', 'hierarchical', 'humanoid', 'imitation', 'intrinsic', 'kinematic', 'lifelong learning', 'meta', 'model-based', 'motion planning', 'multi-task', 'off-policy', 'offline', 'on-policy', 'open-ended', 'optimal', 'population', 'reinforcement', 'replay', 'robot', 'self-supervised', 'skill', 'sparse', 'transfer', 'unsupervised']
 data = []
 # names = []
 for doc in container:
@@ -37,17 +30,17 @@ print(
     file=wfile)
 print("</script>", file=wfile)
 print(
-    "<div id=\"content\" style=\"font-size:2.0vh\">[Links to arXiv/ar5iv articles] <a href=\"#\" onclick=\"toggleVisibility('links')\">[TAGS on/off]</a></div>",
+    "<div id=\"content\" style=\"font-size:16px\">[Click on title to open arXiv / click on authors to open ar5iv] <a href=\"#\" onclick=\"toggleVisibility('links')\">[TAGS on/off]</a></div>",
     file=wfile)
-print("<div id=\"links\" style=\"display:block\">", file=wfile)
-print("<table style=\"font-size:2.0vh\"><td width=\"100\%\"><i>", file=wfile)
+print("<div id=\"links\" style=\"display:none;\">", file=wfile)
+print("<table style=\"font-size:16px\"><td width=\"100\%\"><i>", file=wfile)
 # sortedtags = []
 # for x in listtags:
 #     sortedtags.append(listtags[x])
 sortedtags = listtags.copy()
 sortedtags.sort()
 for x in sortedtags:
-    print("<a href=\"index.html?search=&quot;[^]*{" + x + "}&quot;\">" + x + " /</a>",
+    print("<a href=\"index.html?search=&quot;" + x + "&quot;\">" + x + " /</a>",
           file=wfile)
 print("</i></td></table>", file=wfile)
 print("</div>", file=wfile)
