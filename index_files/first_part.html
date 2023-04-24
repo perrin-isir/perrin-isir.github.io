@@ -78,6 +78,7 @@ function initSearch() {
 	document.getElementById('quicksearch').style.display = 'block';
         document.getElementById('qs_field').value = querySt("search");
 	document.getElementById('qs_field').onkeyup = quickSearch;
+	document.getElementById('qs_field').onchange = quickSearch;
  	quickSearch(qs_field);
 }
 
@@ -321,6 +322,8 @@ function closeAllInfo(){
 
 function clearQS() {
 	qsfield.value = '';
+	qsfield.dispatchEvent(new Event('change'));
+	qsfield.dispatchEvent(new Event('change'));
 	showAll();
 }
 
@@ -335,14 +338,6 @@ function updateSetting(obj){
 
 	switch(option)
 	 {
-	 case "opt_searchAbs":
-	   searchAbstract=!searchAbstract;
-	   redoQS();
-	   break;
-	 case "opt_searchRev":
-	   searchReview=!searchReview;
-	   redoQS();
-	   break;
 	 case "opt_useRegExp":
 	   searchRegExp=!searchRegExp;
 	   redoQS();
@@ -356,13 +351,8 @@ function updateSetting(obj){
 }
 
 function initPreferences(){
-	if(searchAbstract){document.getElementById("opt_searchAbs").checked = true;}
-	if(searchReview){document.getElementById("opt_searchRev").checked = true;}
 	if(noSquiggles){document.getElementById("opt_noAccents").checked = true;}
 	if(searchRegExp){document.getElementById("opt_useRegExp").checked = true;}
-	
-	if(numAbs==0) {document.getElementById("opt_searchAbs").parentNode.style.display = 'none';}
-	if(numRev==0) {document.getElementById("opt_searchRev").parentNode.style.display = 'none';}
 }
 
 function toggleSettings(){
@@ -388,7 +378,17 @@ html {
     font-size: max(1.4vh, 14px);
 }
 
-html a:link { color: black; }
+html a:link {
+    color: black;
+}
+
+html a:hover {
+    text-decoration: none;
+}
+
+html a:active {
+    text-decoration: none;
+}
 
 
 form#quicksearch { width: auto; border-style: solid; border-color: gray; border-width: 1px 0px; padding: 0.7em 0.5em; display:none; position:relative; }

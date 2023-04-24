@@ -110,7 +110,9 @@ a:visited {
    background:      transparent;
 }
 
-a:hover,
+a:hover {
+   text-decoration: none;
+}
 a:active {
    text-decoration: none;
 }
@@ -213,7 +215,7 @@ del * {				/* Required for Mozilla */
 
 ins,
 ins * {				/* Required for Mozilla */
-   text-decoration: underline;
+   text-decoration: none;
 }
 
 

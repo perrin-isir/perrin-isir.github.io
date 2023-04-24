@@ -94,7 +94,7 @@ a:visited {
 
 a:hover,
 a:active {
-   text-decoration: underline;
+   text-decoration: none;
 }
 
 
@@ -193,7 +193,7 @@ del * {				/* Required for Mozilla */
 
 ins,
 ins * {				/* Required for Mozilla */
-   text-decoration: underline;
+   text-decoration: none;
 }
 
 
@@ -736,7 +736,7 @@ table.simple th.right {
 
 #footer a:link,
 #footer a:visited {
-   text-decoration: underline;
+   text-decoration: none;
    color:           white;
    background:      transparent;
 }

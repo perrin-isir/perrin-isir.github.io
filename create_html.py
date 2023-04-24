@@ -29,18 +29,21 @@ print(
     "function toggleVisibility(x) { var e = document.getElementById(x); if(e.style.display == 'block') e.style.display = 'none'; else e.style.display = 'block';}",
     file=wfile)
 print("</script>", file=wfile)
+print("<script type=\"text/javascript\">", file=wfile)
+print("function change(x){ elt = document.getElementById(\"qs_field\"); elt.value = x; elt.dispatchEvent(new Event('change')); elt.dispatchEvent(new Event('change')); }", file=wfile)
+print("</script>", file=wfile)
 print(
-    "<div style=\"font-size:1rem\">[Click on title to open arXiv / click on authors to open ar5iv] <a href=\"#\" onclick=\"toggleVisibility('links')\">[TAGS on/off]</a></div>",
+    "<div style=\"font-size:1rem\">Click on /abstract/ to show the abstract - Click on the abstract to hide it - Click on title to open arXiv - Click on authors to open ar5iv</div>",
     file=wfile)
+
 print("<div id=\"links\" style=\"display:none;\">", file=wfile)
 print("<table style=\"font-size:1rem\"><td width=\"100\%\"><i>", file=wfile)
-# sortedtags = []
-# for x in listtags:
-#     sortedtags.append(listtags[x])
 sortedtags = listtags.copy()
 sortedtags.sort()
+
 for x in sortedtags:
-    print("<a href=\"index.html?search=&quot;" + x + "&quot;\">" + x + " /</a>",
+    # print("<a href=\"index.html?search=&quot;" + x + "&quot;\" onclick=\"$('#qs_field').text(test)\">" + x + " /</a>",
+    print("<a onclick=\"change('" + x + "');\">" + x + " /</a>",
           file=wfile)
 print("</i></td></table>", file=wfile)
 print("</div>", file=wfile)
@@ -48,6 +51,8 @@ print("</div>", file=wfile)
 middlepart = open('./index_files/middle_part.html', 'r')
 for line in middlepart:
     print(line, file=wfile)
+    
+print("</table><table style=\"font-size:1rem\" bgcolor=\"#F5F6CE\" WIDTH=\"300\" id=\"qs_table\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">", file=wfile)
 
 i = 0
 for d in data:
@@ -104,13 +109,15 @@ for d in data:
          file=wfile)
     print(authors.decode('UTF-8'), "&nbsp;", file=wfile)
     print("</a></I>&nbsp;", file=wfile)
-    print("<div id=\"abstract"
+    print("<a onclick=\"toggleVisibility('abstract"
          + str(i)
-         + "\" style=\"font-size: 1rem; display: none\">", file=wfile)
+         + "');\"><div id=\"abstract"
+         + str(i)
+         + "\" style=\"font-size: 1rem; color:black; display: none\">", file=wfile)
     print("<u><I>", dockey.decode('UTF-8'), "&nbsp; - &nbsp;", file=wfile)
     for tg in tag:
          print("{" + tg.decode('UTF-8') + "}", file=wfile)
-    print("</I></u><br>", abstract.decode('UTF-8'), "<br><br></div>", file=wfile)
+    print("</I></u><br>", abstract.decode('UTF-8'), "<br><br></div></a>", file=wfile)
     print("</td></tr>", file=wfile)
 
 firstpart = open('./index_files/last_part.html', 'r')

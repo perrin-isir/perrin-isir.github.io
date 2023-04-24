@@ -3,22 +3,17 @@
 <tr>
 <td width="100%">
 <form action="" id="quicksearch">
-<input style="font-size:1rem; text-align:right" size="30" type="text" id="qs_field" autocomplete="off" placeholder="Type to search..." /> <input style="font-size:1rem" type="button" onclick="clearQS()" value="clear" /><br>
-<span style="font-size:1rem" id="searchstat"> <span id="stat">0</span></span>
+<input style="font-size:1rem; text-align:right" size="30" type="text" id="qs_field" autocomplete="off" placeholder="Type to search..." /> <span style="font-size:1rem" id="searchstat"> <span id="stat">0</span></span> <input style="font-size:1rem" type="button" onclick="clearQS()" value="clear" /> <input style="font-size:1rem" type="button" onclick="toggleVisibility('links')" value="tags on/off" /> <br>
+<span>&nbsp;</span>
 <div style="font-size:1rem" id="showsettings" onclick="toggleSettings()">...</div>
 <div id="settings" class="hidden">
 <ul>
 <li><input type="checkbox" class="search_setting" id="opt_useRegExp" onchange="updateSetting(this)"><label style="font-size:1rem" for="opt_useRegExp"> use RegExp</label></li>
 <li><input type="checkbox" class="search_setting" id="opt_noAccents" onchange="updateSetting(this)"><label style="font-size:1rem" for="opt_noAccents"> ignore accents</label></li>
-<li><input type="checkbox" class="search_setting" id="opt_searchAbs" onchange="updateSetting(this)"><label style="font-size:1rem" for="opt_searchAbs"> include abstract</label></li>
-<li><input type="checkbox" class="search_setting" id="opt_searchRev" onchange="updateSetting(this)"><label style="font-size:1rem" for="opt_searchRev"> include review</label></li>
 </ul>
 </div>
 </form>
 </td>
 </tr>
 
-</table>
-
-<table style="font-size:1rem" bgcolor="#F5F6CE" WIDTH="300" id="qs_table" border="0" cellspacing="0" cellpadding="0">
 
