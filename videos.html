@@ -53,10 +53,9 @@ function showForumVideo(n, videoId, seconds)
 
     if (elm) {
         elm.innerHTML = "<a href=\"javascript:hideForumVideo(" + n + ")\">- Hide video</a><br />" +
-                "<object style=\"width: 640px; height: 480px\"><param name=\"movie\" " +
-                "value=\"http://www.youtube.com/v/" + videoId + "&amp;autoplay=1" + startParam + "\"></param>" +
-                "<embed src=\"http://www.youtube.com/v/" + videoId + "&amp;autoplay=1" + startParam + "\" type=\"application/x-shockwave-flash\" " +
-                "style=\"width: 640px; height: 480px\"></object>";
+                "<object style=\"width: 600px\">" + 
+                "<iframe width=\"600px\" height=\"600px\" src=\"https://www.youtube.com/embed/" + videoId + "?controls=1&autoplay=1&rel=0&mute=1&loop=1\"; title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen = true></iframe>" +
+                "</object>";
     }
 }
 
