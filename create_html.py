@@ -3,7 +3,7 @@ import re
 
 tree = ET.parse('./scidox.reflib')
 root = tree.getroot()
-wfile = open('./index.html', 'w+')
+wfile = open('./arxiv_list.html', 'w+')
 container = root.findall("./doclist/doc")
 # tags = root.findall("./taglist/tag")
 # listtags={}
@@ -12,7 +12,7 @@ container = root.findall("./doclist/doc")
 #     b = t.findall("./name")[0].text.encode('ascii', 'xmlcharrefreplace')
 #     listtags[a.decode('UTF-8')] = b.decode('UTF-8')
 
-listtags = ['contrastive', 'control', 'deep', 'distill', 'diversity', 'entropy', 'evolution', 'explainable', 'exploration', 'few-shot', 'goal-conditioned', 'gradient', 'hierarchical', 'humanoid', 'imitation', 'intrinsic', 'kinematic', 'lifelong learning', 'meta', 'model-based', 'motion planning', 'multi-task', 'off-policy', 'offline', 'on-policy', 'open-ended', 'optimal', 'population', 'reinforcement', 'replay', 'robot', 'self-supervised', 'skill', 'sparse', 'transfer', 'unsupervised']
+listtags = ['contrastive', 'control', 'deep', 'distill', 'diversity', 'entropy', 'evolution', 'exoskeleton', 'explainable', 'exploration', 'few-shot', 'goal-conditioned', 'gradient', 'hierarchical', 'humanoid', 'imitation', 'intrinsic', 'kinematic', 'lifelong learning', 'meta', 'model-based', 'motion planning', 'multi-task', 'off-policy', 'offline', 'on-policy', 'open-ended', 'optimal', 'population', 'reinforcement', 'replay', 'robot', 'self-supervised', 'skill', 'sparse', 'transfer', 'unsupervised']
 data = []
 # names = []
 for doc in container:
@@ -42,7 +42,6 @@ sortedtags = listtags.copy()
 sortedtags.sort()
 
 for x in sortedtags:
-    # print("<a href=\"index.html?search=&quot;" + x + "&quot;\" onclick=\"$('#qs_field').text(test)\">" + x + " /</a>",
     print("<a onclick=\"change('" + x + "');\">" + x + " /</a>",
           file=wfile)
 print("</i></td></table>", file=wfile)
