@@ -8,6 +8,6 @@
 
 4) With Referencer, create a new library, import biblio.bib, and save the library as scidox.reflib.
 
-5) Run 'python create_html.py' to generate index.html
+5) Run 'python create_html.py' to generate arxiv_list.html
 
 6) Replace arxiv_id_list.txt by tmp.txt
