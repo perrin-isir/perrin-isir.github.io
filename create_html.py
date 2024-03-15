@@ -99,9 +99,12 @@ for d in data:
          + str(i)
          + "');\">[|&bull;|]</a><a href=\"" + url.decode(
              'UTF-8') + "\">", file=wfile)
+    # __import__("IPython").embed()
+    if type(year) == bytes:
+        year = year.decode('UTF-8')
     print("<b/>",
          title.decode('UTF-8').replace('{', '').replace('}', ''),
-         "(" + year.decode('UTF-8') + ")</b>", file=wfile)
+         "(" + year + ")</b>", file=wfile)
     print("</a>", file=wfile)
     print("&nbsp; - &nbsp;", file=wfile)
     print("<I><a href=\"" + url_ar5iv.decode('UTF-8') + "\">",
