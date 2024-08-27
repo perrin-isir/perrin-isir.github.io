@@ -16,7 +16,7 @@ listtags = ['contrastive', 'control', 'deep', 'distill', 'diversity', 'entropy',
 data = []
 # names = []
 for doc in container:
-    key = doc.findtext("./bib_authors") + '/' + doc.findtext("./bib_title")
+    key = str(9999 - int(doc.findtext("./bib_year"))) + '/' + doc.findtext("./bib_authors") + '/' + doc.findtext("./bib_title")
     data.append((key, doc))
 data.sort()  # error if there are duplicate keys
 
@@ -109,7 +109,7 @@ for d in data:
     print("&nbsp; - &nbsp;", file=wfile)
     print("<I><a href=\"" + url_ar5iv.decode('UTF-8') + "\">",
          file=wfile)
-    print(authors.decode('UTF-8'), "&nbsp;", file=wfile)
+    print(authors.decode('UTF-8').replace(" and ", ", "), "&nbsp;", file=wfile)
     print("</a></I><span style=\"float:right\"><a onclick=\"toggleVisibility('abstract"
          + str(i)
          + "');\">[|&bull;|]</a></span>", file=wfile)
