@@ -583,7 +583,7 @@ table.simple th.right {
 				/* Left part is ideally an image.            */
 
 #header {			/* Warning: not printed out on paper */
-   color:           #4d5c45;
+   color:           #000000;
    background:      #ffffff    /* #6688bb;   */                               /* Here the color of a VISIBLE BACKGROUND */
 }
 
