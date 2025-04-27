@@ -694,8 +694,7 @@ table.simple th.right {
 #header .floatbox {
    margin-top: -4px;
    margin-left: 20px;
-   width: 45%;
-   height: 200px;
+   width: 35%;
    background: #ffffff;                /* Here the color of a VISIBLE BOX in the header */   
    float: left;
 }
